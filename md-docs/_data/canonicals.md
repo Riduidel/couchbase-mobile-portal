@@ -23,6 +23,8 @@ The JSON structure must then be converted into YAML which is the data format use
 - `path`: the path location to generate the file.
 - `redirect_to`: the redirect URL to include as the canonical URL and in the `window.location.href` function.
 
+Note: Generated files in _11 and _12 should not be checked in Git.
+
 ### Deploy
 
 Once the files are generated, they can be generated as html files with Jekyll for verification.
