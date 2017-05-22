@@ -128,6 +128,12 @@ properties:
             type: string
             description: Feed type DCP or TAP.
             default: TAP
+          import_docs:
+            since: 1.5
+            type: string
+            enum:
+              - continuous:
+                  description: This property must be set to use Sync Gateway convergence. In an environment with multiple Sync Gateway instances, only 1 Sync Gateway instance should have this property enabled in its configuration file.
           oidc:
             type: object
             description: OIDC providers.
@@ -218,6 +224,14 @@ properties:
           username:
             type: string
             description: Bucket username for authenticating to Couchbase Server. There is no default.
+          unsupported:
+            type: object
+            description: Options currently available in a developer preview or experimental only.
+            properties:
+              enable_extended_attributes:
+                since: 1.5
+                type: boolean
+                description: Enable Sync Gateway convergence.
           users:
             type: object
             description: Initial user accounts.
